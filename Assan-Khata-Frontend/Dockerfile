@@ -1,11 +1,11 @@
-FROM node:lts-alpine
+# Use the official Nginx image as a base
+FROM nginx:alpine
 
-RUN npm -y -g install serve
+# Copy the built web files to the Nginx public directory
+COPY build/web /usr/share/nginx/html
 
-WORKDIR /app/
+# Expose port 80
+EXPOSE 80
 
-copy . .
-
-EXPOSE 3000
-
-CMD ["serve", "web"]
+# Start Nginx
+CMD ["nginx", "-g", "daemon off;"]
