@@ -2,7 +2,7 @@
 FROM nginx:alpine
 
 # Copy the built web files to the Nginx public directory
-COPY . .
+COPY web /usr/share/nginx/html
 
 # Expose port 80
 EXPOSE 80
