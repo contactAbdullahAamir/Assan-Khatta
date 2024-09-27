@@ -1,6 +1,6 @@
 class AppSecrets {
   baseServerUrl() {
-    return 'https://assankhatta-30xggbrs.b4a.run';
+    return 'https://assan-khatta-backend.vercel.app';
   }
 
   baseApiUrl() {
